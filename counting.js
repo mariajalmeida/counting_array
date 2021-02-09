@@ -9,10 +9,12 @@ function actionBegins() {
 
     const int = setInterval(res => {
         number++;
-        if (number <= 9) {
+        if (number <= 30) {
             number = number.toString();
             array.unshift(number);
-            console.log(array);
+            if (number >= 10)
+                console.log(array.pop());
+            console.log(array, "???");
         } else {
             console.log("done");
             clearInterval(int);
